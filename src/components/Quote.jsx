@@ -1,8 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import 'font-awesome/css/font-awesome.min.css';
+
+import Spinner from './Spinner';
 
 import axios from 'axios';
 
+import 'font-awesome/css/font-awesome.min.css';
 import './Quote.scss';
 
 const Quote = () => {
@@ -38,7 +40,7 @@ const Quote = () => {
 	return (
 		<Fragment>
 			{isError && <div>Something went wrong...</div>}
-			{isLoading && <p id='loading'>Loading...</p>}
+			{isLoading && <Spinner />}
 
 			{!isLoading && (
 				<div id='quote-box'>

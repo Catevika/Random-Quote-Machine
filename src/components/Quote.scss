@@ -24,29 +24,6 @@ $break-medium: 625px;
 	background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
 	background: linear-gradient(to right, #eaafc8, #654ea3);
 
-	#loading {
-		font: 100% $font-stack;
-		font-size: 24px;
-		font-weight: normal;
-		padding: 60px;
-		background-color: $primary-color;
-		color: $secondary-color;
-		width: 600px;
-		height: 170px;
-		margin-top: 15px;
-		margin-bottom: 35px;
-		border-radius: 10px;
-		-webkit-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
-		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
-		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
-
-		@media screen and (max-width: $break-medium) {
-			width: 310px;
-			height: 170px;
-			font-size: 18px;
-		}
-	}
-
 	#quote-box {
 		display: block;
 		font: 100% $font-stack;
