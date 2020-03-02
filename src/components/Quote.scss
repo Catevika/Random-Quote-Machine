@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$font-stack: 'Roboto', sans-serif;
+$font-size: 18px;
+$primary-color: #ebbed2;
+$secondary-color: rgb(75, 41, 104);
+$twitter-color: rgb(3, 104, 219);
+$button-color: whitesmoke;
+
+$break-medium: 625px;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #654ea3;
+	background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+	background: linear-gradient(to right, #eaafc8, #654ea3);
+
+	#loading {
+		font: 100% $font-stack;
+		font-size: 24px;
+		font-weight: normal;
+		padding: 60px;
+		background-color: $primary-color;
+		color: $secondary-color;
+		width: 600px;
+		height: 150px;
+		margin-top: 15px;
+		margin-bottom: 35px;
+		border-radius: 10px;
+		-webkit-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+
+		@media screen and (max-width: $break-medium) {
+			width: 310px;
+			height: 170px;
+			font-size: 18px;
+		}
+	}
+
+	#quote-box {
+		display: block;
+		font: 100% $font-stack;
+		font-size: $font-size;
+		font-weight: normal;
+		background-color: $primary-color;
+		width: 600px;
+		height: 170px;
+		border-radius: 10px;
+		-webkit-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		@media screen and (max-width: $break-medium) {
+			width: 310px;
+			height: 170px;
+			font-size: 16px;
+		}
+		#text {
+			height: 120px;
+			padding: 20px 40px 0 40px;
+			color: $secondary-color;
+			span {
+				font-size: 24px;
+			}
+			@media screen and (max-width: $break-medium) {
+				padding: 10px 30px 0 30px;
+				span {
+					font-size: 18px;
+				}
+			}
+		}
+
+		#author {
+			position: relative;
+			float: right;
+			width: 600px;
+			height: 30px;
+			margin-top: 15px;
+			margin-bottom: 35px;
+			padding-left: 325px;
+			color: $secondary-color;
+			font-style: italic;
+			@media screen and (max-width: $break-medium) {
+				width: 310px;
+				padding-left: 50px;
+			}
+		}
+		#author-anonymous {
+			position: relative;
+			float: right;
+			width: 600px;
+			height: 30px;
+			margin-top: 15px;
+			margin-bottom: 35px;
+			padding-left: 325px;
+			color: $secondary-color;
+			font-style: italic;
+			@media screen and (max-width: $break-medium) {
+				width: 310px;
+				padding-left: 50px;
+			}
+		}
+	}
+	#new-quote {
+		position: relative;
+		float: left;
+		width: auto;
+		font-weight: 500;
+		font-family: $font-stack;
+		font-size: $font-size;
+		background-color: $primary-color;
+		color: $secondary-color;
+		border-radius: 5px;
+		border: none;
+		padding: 5px 10px;
+		margin-left: 90px;
+		cursor: pointer;
+		-webkit-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		&:hover {
+			background-color: $secondary-color;
+			color: $primary-color;
+		}
+		@media screen and (max-width: $break-medium) {
+			display: block;
+			float: none;
+			margin-left: 0;
+			margin: 0 auto 10px;
+			font-size: 16px;
+		}
+	}
+	#tweet-quote {
+		position: relative;
+		float: right;
+		width: auto;
+		font-weight: 500;
+		background-color: $twitter-color;
+		text-decoration: none;
+		color: $button-color;
+		border-radius: 5px;
+		margin-right: 90px;
+		padding: 5px 10px;
+		cursor: pointer;
+		-webkit-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
+		&:hover {
+			background-color: $secondary-color;
+			color: $primary-color;
+		}
+		@media screen and (max-width: $break-medium) {
+			display: block;
+			float: none;
+			margin-right: 0;
+			margin: 0 auto;
+			font-size: 16px;
+			width: max-content;
+		}
+	}
+}
