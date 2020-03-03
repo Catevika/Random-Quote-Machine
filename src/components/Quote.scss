@@ -15,11 +15,6 @@ $break-medium: 625px;
 	padding: 0;
 }
 
-body {
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
-}
-
 #root {
 	display: flex;
 	justify-content: center;
@@ -42,7 +37,6 @@ body {
 		-moz-box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
 		box-shadow: 10px 10px 20px -11px rgba(128, 75, 128, 0.8);
 		@media screen and (max-width: $break-medium) {
-			justify-content: center;
 			width: 310px;
 			height: 170px;
 			font-size: 16px;
