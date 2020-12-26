@@ -17,9 +17,7 @@ const Quote = () => {
 			setIsError(false);
 			setIsLoading(true);
 			try {
-				const result = await axios(
-					'https://quote-garden.herokuapp.com/quotes/random'
-				);
+				const result = await axios('https://favqs.com/api/qotd');
 				setQuote(result.data);
 			} catch (error) {
 				setIsError(true);
@@ -30,9 +28,7 @@ const Quote = () => {
 	}, []);
 
 	const handleClick = async () => {
-		const res = await axios.get(
-			'https://quote-garden.herokuapp.com/quotes/random'
-		);
+		const res = await axios.get('https://favqs.com/api/qotd');
 		setQuote(res.data);
 		setIsLoading(false);
 	};
@@ -46,11 +42,11 @@ const Quote = () => {
 				<div id='quote-box'>
 					<p id='text'>
 						<span>"</span>
-						{quote.quoteText}
+						{quote.quote.body}
 						<span>"</span>
 					</p>
-					{quote.quoteAuthor ? (
-						<p id='author'>- {quote.quoteAuthor} -</p>
+					{quote.quote.author ? (
+						<p id='author'>- {quote.quote.author} -</p>
 					) : (
 						<p id='author-anonymous'>- Anonymous -</p>
 					)}
@@ -58,7 +54,7 @@ const Quote = () => {
 						New Quote
 					</button>
 					<a
-						href={`https://twitter.com/intent/tweet?text="${quote.quoteText}"%20-%20${quote.quoteAuthor}`}
+						href={`https://twitter.com/intent/tweet?text="${quote.quote.body}"%20-%20${quote.quote.author}`}
 						id='tweet-quote'
 					>
 						<i className='fa fa-twitter' /> Send quote to Twitter{' '}
